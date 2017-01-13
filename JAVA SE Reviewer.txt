@@ -1,0 +1,120 @@
+=====================================class=====================================
+In object-oriented programming , a class is a template definition of the method s and variable s in a particular kind of object . Thus, an object is a specific instance of a class; it contains real values instead of variables. The class is one of the defining ideas of object-oriented programming.
+
+=====================================public static void main(String[]args)=====================================
+In this case, main must be declared as public, since it must be called by code outside of its class when the program is started. 
+The keyword static allows main to be called without having to instantiate a particular instance of the class. 
+The keyword void simply tells the compiler that main does not return a value. The main is the method called when a Java application begins.
+
+public: it is the access specifier.
+
+static: it allows main() to be called without instantiating a particular instance of a class.
+
+void: it affirns the compiler that no value is returned by main().
+
+main(): this method is called at the beginning of a Java program.
+
+String args[ ]: args parameter is an instance array of class String
+
+=====================================public static void main(String[]args)=====================================
+
+=====================================Object Oriented Programming=====================================
+Object-oriented programming (OOP) is a programming paradigm that represents the concept of “objects” that have data fields (attributes that describe the object) and associated procedures known as methods. 
+Objects, which are usually instances of classes, are used to interact with one another to design applications and computer programs.
+Object Oriented Programming is a programming paradigm that uses "objects" to design applications and computer programs. 
+=====================================Object Oriented Programming=====================================
+
+=====================================Encapsulation=====================================
+Encapsulation is the technique of making the fields in a class private and providing access to the fields via public methods. If a field is declared private, it cannot be accessed by anyone outside the class, thereby hiding the fields within the class. For this reason, encapsulation is also referred to as data hiding.
+
+Encapsulation can be described as a protective barrier that prevents the code and data being randomly accessed by other code defined outside the class. Access to the data and code is tightly controlled by an interface.
+
+The main benefit of encapsulation is the ability to modify our implemented code without breaking the code of others who use our code. With this feature Encapsulation gives maintainability, flexibility and extensibility to our code.
+
+Benefits of Encapsulation:
+The fields of a class can be made read-only or write-only.
+A class can have total control over what is stored in its fields.
+The users of a class do not know how the class stores its data. A class can change the data type of a field, and users of the class do not need to change any of their code.
+=====================================Encapsulation=====================================
+
+=====================================Abstraction=====================================
+Abstraction is process of hiding the implementation details and showing only the functionality.
+Use abstraction if you know something needs to be in class but implementation of that varies.
+In Java you cannot create instance of abstract class , its compiler error.
+Abstract is a keyword in java.
+A class automatically becomes abstract class when any of its method declared as abstract.
+Abstract method doesn't have method body.
+Variable cannot be made abstract, its only behavior or methods which would be abstract.
+If a class extends an abstract class or interface it has to provide implementation to all its abstract method to be a concrete class. Alternatively this class can also be abstract.
+
+Abstract classes are classes that contain one or more abstract methods. An abstract method is a method that is declared, but contains no implementation. Abstract classes may not be instantiated, and require subclasses to provide implementations for the abstract methods. Let's look at an example of an abstract class, and an abstract method.
+
+Animals are capable of doing different things like flying, digging and walking, but there are some common operations as well like eating and sleeping. Some common operations are performed by all animals, but in a different way as well. When an operation is performed in a different way, it is a good candidate for an abstract method (forcing subclasses to provide a custom implementation)
+
+Now you may be wondering why not declare an abstract class as an interface, and have the Dog and Cow implement the interface. Sure you could - but you'd also need to implement the eat and sleep methods. By using abstract classes, you can inherit the implementation of other (non-abstract) methods. You can't do that with interfaces - an interface cannot provide any method implementations.
+=====================================Abstraction=====================================
+
+=====================================Interface=====================================
+An interface is a contract (or a protocol, or a common understanding) of what the classes can do. 
+When a class implements a certain interface, it promises to provide implementation to all the abstract methods declared in the interface. 
+Interface defines a set of common behaviors. 
+The classes implement the interface agree to these behaviors and provide their own implementation to the behaviors. This allows you to program at the interface, instead of the actual implementation. One of the main usage of interface is provide a communication contract between two objects. If you know a class implements an interface, then you know that class contains concrete implementations of the methods declared in that interface, and you are guaranteed to be able to invoke these methods safely. In other words, two objects can communicate based on the contract defined in the interface, instead of their specific implementation.
+=====================================Interface=====================================
+
+=====================================Polymorphism=====================================
+By name we can come to a conclusion that it’s about something with many forms. In OOP it is an ability of an object to take many forms
+Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
+
+Inheritance refers to using the structure and behavior of a superclass in a subclass. Polymorphism refers to changing the behavior of a superclass in the subclass.
+
+Polymorphism exists in three distinct forms in Java: 
+• Method overloading 
+• Method overriding through inheritance 
+• Method overriding through the Java interface
+=====================================Polymorphism=====================================
+
+=====================================Inheritance=====================================
+Concept wherein the state and behavior of one class is inherited by another class
+To be able to reuse code for different classes by putting it in a common superclass
+When one task is performed by different ways i.e. known as polymorphism.
+=====================================Inheritance=====================================
+
+=====================================Two Types of Exception=====================================
+1. Unchecked - this exception was not check during compilation and usually this exception occure because of the programmer or users input. It is also happens during runtime
+2. Checked - this exception occur during compilation of the program and usually compiler forces us to write throws or try catch
+=====================================Two Types of Exception=====================================
+
+=====================================Error and Exception=====================================
+1. java.lang.Error class represents the errors which are mainly caused by the environment in which application is running. For example, OutOfMemoryError occurs when JVM runs out of memory or StackOverflowError occurs when stack overflows.
+2. java.lang.Exception class represents the exceptions which are mainly caused by the application itself. For example, NullPointerException occurs when an application tries to access null object or ClassCastException occurs when an application tries to cast incompatible class types.
+
+Error - when this happen, it is impossible to recover the application and usually the app will terminate. Error is under unchecked category because the compiler will not check this. 
+Exception. Usually error happens because of the environement wherein the application is running.
+
+Exception - when this happen, we can recover the application by using try catch or throws. Exception also have two sub category, uncheked and checked. Ussualy exception happens because of the application itself.
+=====================================Error and Exception=====================================
+
+=====================================Thread=====================================
+You should use multithreading when you want to perform heavy operations without "blocking" the flow.
+Example in UIs where you do a heavy processing in a background thread but the UI is still active.
+
+If the threads execute mutually exclusive tasks it is the best since there is no overhead for synchronization among threads needed
+=====================================Thread=====================================
+
+=====================================JVM, JDK, JRE=====================================
+JVM - It is a specification that provides runtime environment in which java bytecode can be executed.
+Loads code
+Verifies code
+Executes code
+Provides runtime environment
+
+JRE - is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM.It physically exists.It contains set of libraries + other files that JVM uses at runtime.
+
+JDK is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
+=====================================JVM, JDK, JRE=====================================
+
+=====================================Variables=====================================
+Instance variable - A variable that is created inside the class but outside the method, is known as instance variable.Instance variable doesn't get memory at compile time.It gets memory at runtime when object(instance) is created.
+
+=====================================MVC=====================================
+Model–view–controller (MVC) is a software architectural pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user.
